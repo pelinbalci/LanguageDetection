@@ -10,6 +10,7 @@ st.write('The current text is', title)
 inputs = {"text": title}
 
 if st.button("Detect Language"):
-    res = requests.post(url = "http://0.0.0.0:80/predict", data=json.dumps(inputs))
-
-    st.subheader(f"response from API = {res.text}")
+    res = requests.post(url = "http://localhost:80/predict", data=json.dumps(inputs))
+    language = res.json()['language']
+    st.write(f'Language: {language}')
+    # st.subheader(f"response from API = {res.text}")

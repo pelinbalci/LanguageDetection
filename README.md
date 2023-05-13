@@ -19,7 +19,7 @@ docker run -p 80:80 language-detection-app
 
 After that you can reach the page from: http://localhost:80
 
-Hopefully you will se:
+Hopefully you will see:
 {"health_check":"OK","model_version":"0.1.0"}
 
 If you want to try the model just type: 
